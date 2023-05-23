@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first</title>
+</head>
+<body>
+<table border="1" id="customers">
+
+    <tr>
+    <td>Name</td>
+    <td>phone</td>
+    <td>address</td>
+    <td>location</td>
+    </tr>
+
+    <tr th:each="item : ${all}">
+        <td th:text="${item.name}"></td>
+        <td th: text="$item.phone"></td>
+       [[${item.address.line_one}]]</br>
+        [[${item.address.line_two}]]</br>
+        [[${item.address.state}]]</br>
+        [[${item.address.city}]]</br>
+        [[${item.address.country}]]</br>
+        </td>
+        <td>[]</td>
+        <td></td>
+    </tr>
+</table>
+
+</body>
+</html>
